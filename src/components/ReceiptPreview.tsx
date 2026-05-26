@@ -19,16 +19,16 @@ export default function ReceiptPreview({ data }: Props) {
     <div id="receipt-preview" className="receipt-paper">
       {/* Header */}
       <div className="receipt-header">
-        <h2 className="text-xl font-bold uppercase tracking-tight leading-none">{data.businessName}</h2>
-        <p className="text-[10px] mt-1 opacity-80">{data.address}</p>
-        <p className="text-[10px] opacity-80">Ph: {data.phone}</p>
-        {data.gstin && <p className="text-[10px] font-bold mt-1">GSTIN: {data.gstin}</p>}
+        <h2 className="text-2xl font-bold uppercase tracking-tight leading-none">{data.businessName}</h2>
+        <p className="text-[12px] mt-1 opacity-80">{data.address}</p>
+        <p className="text-[12px] opacity-80">Ph: {data.phone}</p>
+        {data.gstin && <p className="text-[12px] font-bold mt-1">GSTIN: {data.gstin}</p>}
       </div>
 
       <div className="receipt-dashed-line"></div>
 
       {/* Basic Info */}
-      <div className="text-[11px] space-y-0.5 mb-2">
+      <div className="text-[13px] space-y-1 mb-2">
         <div className="flex justify-between">
           <span className="uppercase">Receipt: <span className="font-bold">{data.invoiceNumber}</span></span>
           <span>Date: {formatDate(data.date)}</span>
@@ -72,7 +72,7 @@ export default function ReceiptPreview({ data }: Props) {
       <div className="receipt-dashed-line"></div>
 
       {/* Totals Section */}
-      <div className="space-y-0.5 text-[12px] mt-1">
+      <div className="space-y-1 text-[13px] mt-1">
         <div className="flex justify-between">
           <span className="uppercase">Sub Total</span>
           <span>{data.subtotal.toFixed(2)}</span>
@@ -90,9 +90,9 @@ export default function ReceiptPreview({ data }: Props) {
         
         <div className="receipt-dashed-line"></div>
         
-        <div className="flex justify-between receipt-total pt-1 uppercase">
-          <span className="text-lg">Total</span>
-          <span className="text-lg">{data.currency} {data.grandTotal.toFixed(2)}</span>
+        <div className="flex justify-between receipt-total pt-1 pb-1 uppercase">
+          <span>Total</span>
+          <span>{data.currency}{data.grandTotal.toFixed(2)}</span>
         </div>
       </div>
 
@@ -100,9 +100,8 @@ export default function ReceiptPreview({ data }: Props) {
 
       {/* Footer */}
       <div className="receipt-footer pb-2">
-        <p className="font-bold mb-1 uppercase tracking-wider">{data.thankYouMessage}</p>
-        <p className="opacity-70 text-[10px]">{data.footerNote}</p>
-        <div className="mt-4 text-[9px] opacity-30 uppercase tracking-widest">
+        <p className="text-sm font-bold mb-1 uppercase tracking-wider">{data.thankYouMessage}</p>
+        <div className="mt-4 text-[10px] opacity-30 uppercase tracking-widest">
           *** digital receipt ***
         </div>
       </div>

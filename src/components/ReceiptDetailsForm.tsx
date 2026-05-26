@@ -21,13 +21,13 @@ export default function ReceiptDetailsForm({ data, updateData }: Props) {
             type="text"
             value={data.invoiceNumber}
             onChange={(e) => updateData({ invoiceNumber: e.target.value })}
-            className="w-full bg-input border-transparent focus:border-primary focus:ring-1 focus:ring-primary rounded-xl px-4 py-2 outline-none transition-all"
+            className="w-full bg-input border-transparent focus:border-primary focus:ring-1 focus:ring-primary rounded-lg px-3 py-1.5 outline-none transition-all text-sm"
           />
         </div>
         
         <div>
           <label className="block text-sm font-medium mb-1 opacity-70">Date</label>
-          <div className="flex items-center gap-2 bg-input rounded-xl px-4 py-2 border-transparent focus-within:border-primary transition-all border">
+          <div className="flex items-center gap-2 bg-input rounded-lg px-3 py-1.5 border-transparent focus-within:border-primary transition-all border text-sm">
             <Calendar size={16} className="opacity-40" />
             <input
               type="date"
@@ -40,7 +40,7 @@ export default function ReceiptDetailsForm({ data, updateData }: Props) {
 
         <div>
           <label className="block text-sm font-medium mb-1 opacity-70">Time</label>
-          <div className="flex items-center gap-2 bg-input rounded-xl px-4 py-2 border-transparent focus-within:border-primary transition-all border">
+          <div className="flex items-center gap-2 bg-input rounded-lg px-3 py-1.5 border-transparent focus-within:border-primary transition-all border text-sm">
             <Clock size={16} className="opacity-40" />
             <input
               type="time"
@@ -53,7 +53,7 @@ export default function ReceiptDetailsForm({ data, updateData }: Props) {
 
         <div>
           <label className="block text-sm font-medium mb-1 opacity-70">Token Number</label>
-          <div className="flex items-center gap-2 bg-input rounded-xl px-4 py-2 border-transparent focus-within:border-primary transition-all border">
+          <div className="flex items-center gap-2 bg-input rounded-lg px-3 py-1.5 border-transparent focus-within:border-primary transition-all border text-sm">
             <Tag size={16} className="opacity-40" />
             <input
               type="text"
@@ -67,7 +67,7 @@ export default function ReceiptDetailsForm({ data, updateData }: Props) {
 
         <div>
           <label className="block text-sm font-medium mb-1 opacity-70">Order Type</label>
-          <div className="flex items-center gap-2 bg-input rounded-xl px-4 py-2 border-transparent focus-within:border-primary transition-all border">
+          <div className="flex items-center gap-2 bg-input rounded-lg px-3 py-1.5 border-transparent focus-within:border-primary transition-all border text-sm">
             <ShoppingBag size={16} className="opacity-40" />
             <select
               value={data.orderType}
@@ -83,7 +83,7 @@ export default function ReceiptDetailsForm({ data, updateData }: Props) {
 
         <div>
           <label className="block text-sm font-medium mb-1 opacity-70">Payment Mode</label>
-          <div className="flex items-center gap-2 bg-input rounded-xl px-4 py-2 border-transparent focus-within:border-primary transition-all border">
+          <div className="flex items-center gap-2 bg-input rounded-lg px-3 py-1.5 border-transparent focus-within:border-primary transition-all border text-sm">
             <CreditCard size={16} className="opacity-40" />
             <select
               value={data.paymentMode}

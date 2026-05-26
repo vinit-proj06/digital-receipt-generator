@@ -46,29 +46,29 @@ body {
   color: black;
   font-family: var(--font-receipt);
   width: 100%;
-  max-width: 440px; /* Increased to fill more of the container */
+  max-width: 520px; /* Scaled up by ~15-25% to fill container better */
   margin: 0 auto;
-  padding: 24px; /* Spacing adjusted closer to margins */
+  padding: 24px; /* Clean spacing closer to borders */
   position: relative;
   border: 1px solid #e2e8f0;
-  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.04), 0 4px 6px -4px rgb(0 0 0 / 0.04);
+  box-shadow: 0 4px 12px -2px rgb(0 0 0 / 0.03), 0 2px 6px -1px rgb(0 0 0 / 0.02); /* Soft, subtle premium shadow */
 }
 
 .receipt-dashed-line {
   border-top: 1px dashed #000;
-  margin: 8px 0;
+  margin: 10px 0; /* Balanced vertical line margins */
   width: 100%;
   opacity: 0.5;
 }
 
 .receipt-header {
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .receipt-table {
   width: 100%;
-  font-size: 13px;
+  font-size: 15px; /* Increased from 13px for excellent readability */
   line-height: 1.4;
   border-collapse: collapse;
 }
@@ -76,17 +76,18 @@ body {
 .receipt-table th {
   border-top: 1px dashed #000;
   border-bottom: 1px dashed #000;
-  padding: 4px 0;
+  padding: 6px 0; /* Dynamic header padding */
   font-weight: bold;
 }
 
 .receipt-table td {
-  padding: 2px 0;
+  padding: 3px 0;
 }
 
 .receipt-total {
   font-weight: bold;
-  font-size: 16px;
+  font-size: 18px; /* Increased from 15px to emphasize the grand total section */
+  padding: 6px 0;
 }
 
 .receipt-footer {

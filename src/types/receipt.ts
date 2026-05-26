@@ -9,7 +9,6 @@ export interface Item {
 export interface ReceiptData {
   businessName: string;
   phone: string;
-  email: string;
   address: string;
   gstin: string;
   logo?: string;
@@ -29,7 +28,6 @@ export interface ReceiptData {
   grandTotal: number;
   
   thankYouMessage: string;
-  footerNote: string;
   
   currency: string;
 }

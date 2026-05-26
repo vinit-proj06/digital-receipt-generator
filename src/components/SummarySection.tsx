@@ -19,7 +19,7 @@ export default function SummarySection({ data, updateData }: Props) {
           
           <div>
             <label className="block text-sm font-medium mb-1 opacity-70">Thank You Message</label>
-            <div className="flex items-center gap-2 bg-input rounded-xl px-4 py-2 border-transparent focus-within:border-primary transition-all border">
+            <div className="flex items-center gap-2 bg-input rounded-lg px-3 py-1.5 border-transparent focus-within:border-primary transition-all border text-sm">
               <StickyNote size={16} className="opacity-40" />
               <input
                 type="text"
@@ -31,23 +31,11 @@ export default function SummarySection({ data, updateData }: Props) {
             </div>
           </div>
 
-          <div>
-            <label className="block text-sm font-medium mb-1 opacity-70">Footer Note (Optional)</label>
-            <div className="flex items-center gap-2 bg-input rounded-xl px-4 py-2 border-transparent focus-within:border-primary transition-all border">
-              <StickyNote size={16} className="opacity-40" />
-              <input
-                type="text"
-                value={data.footerNote}
-                onChange={(e) => updateData({ footerNote: e.target.value })}
-                className="w-full bg-transparent outline-none"
-                placeholder="Powered by Digital Receipt Pro"
-              />
-            </div>
-          </div>
+
 
           <div className="mt-4">
             <label className="block text-sm font-medium mb-1 opacity-70">Currency</label>
-            <div className="flex items-center gap-2 bg-input rounded-xl px-4 py-2 border-transparent focus-within:border-primary transition-all border w-32">
+            <div className="flex items-center gap-2 bg-input rounded-lg px-3 py-1.5 border-transparent focus-within:border-primary transition-all border w-32 text-sm">
               <Banknote size={16} className="opacity-40" />
               <select
                 value={data.currency}

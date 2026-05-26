@@ -23,7 +23,7 @@ export default function BusinessForm({ data, updateData }: Props) {
                 type="text"
                 value={data.businessName}
                 onChange={(e) => updateData({ businessName: e.target.value })}
-                className="w-full bg-input border-transparent focus:border-primary focus:ring-1 focus:ring-primary rounded-xl px-4 py-2 outline-none transition-all"
+                className="w-full bg-input border-transparent focus:border-primary focus:ring-1 focus:ring-primary rounded-lg px-3 py-1.5 outline-none transition-all text-sm"
                 placeholder="e.g. My Cafe"
               />
             </div>
@@ -31,7 +31,7 @@ export default function BusinessForm({ data, updateData }: Props) {
           
           <div>
             <label className="block text-sm font-medium mb-1 opacity-70">Phone Number</label>
-            <div className="flex items-center gap-2 bg-input rounded-xl px-4 py-2 border-transparent focus-within:border-primary focus-within:ring-1 focus-within:ring-primary transition-all border">
+            <div className="flex items-center gap-2 bg-input rounded-lg px-3 py-1.5 border-transparent focus-within:border-primary focus-within:ring-1 focus-within:ring-primary transition-all border text-sm">
               <Phone size={16} className="opacity-40" />
               <input
                 type="text"
@@ -42,26 +42,12 @@ export default function BusinessForm({ data, updateData }: Props) {
               />
             </div>
           </div>
-
-          <div>
-            <label className="block text-sm font-medium mb-1 opacity-70">Email (Optional)</label>
-            <div className="flex items-center gap-2 bg-input rounded-xl px-4 py-2 border-transparent focus-within:border-primary focus-within:ring-1 focus-within:ring-primary transition-all border">
-              <Mail size={16} className="opacity-40" />
-              <input
-                type="email"
-                value={data.email}
-                onChange={(e) => updateData({ email: e.target.value })}
-                className="w-full bg-transparent outline-none"
-                placeholder="hello@business.com"
-              />
-            </div>
-          </div>
         </div>
 
         <div className="space-y-4">
           <div>
             <label className="block text-sm font-medium mb-1 opacity-70">Address</label>
-            <div className="flex items-start gap-2 bg-input rounded-xl px-4 py-2 border-transparent focus-within:border-primary focus-within:ring-1 focus-within:ring-primary transition-all border h-full max-h-[105px]">
+            <div className="flex items-start gap-2 bg-input rounded-lg px-3 py-1.5 border-transparent focus-within:border-primary focus-within:ring-1 focus-within:ring-primary transition-all border h-full max-h-[90px] text-sm">
               <MapPin size={16} className="opacity-40 mt-1" />
               <textarea
                 value={data.address}
@@ -75,7 +61,7 @@ export default function BusinessForm({ data, updateData }: Props) {
 
           <div>
             <label className="block text-sm font-medium mb-1 opacity-70">GSTIN / Tax ID</label>
-            <div className="flex items-center gap-2 bg-input rounded-xl px-4 py-2 border-transparent focus-within:border-primary focus-within:ring-1 focus-within:ring-primary transition-all border">
+            <div className="flex items-center gap-2 bg-input rounded-lg px-3 py-1.5 border-transparent focus-within:border-primary focus-within:ring-1 focus-within:ring-primary transition-all border text-sm">
               <Hash size={16} className="opacity-40" />
               <input
                 type="text"

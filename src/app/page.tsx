@@ -17,7 +17,6 @@ const initialItems: Item[] = [
 const initialData: ReceiptData = {
   businessName: 'HopeOF Restaurant',
   phone: '9876543210',
-  email: 'contact@hopeof.com',
   address: '123, Food Street, Gourmet City, 400001',
   gstin: '27AAACH0000A1Z5',
   invoiceNumber: 'HO-2024-001',
@@ -32,7 +31,6 @@ const initialData: ReceiptData = {
   tax: 5, // 5% GST
   grandTotal: 189,
   thankYouMessage: 'Thank You for Dining With Us!',
-  footerNote: 'Visit Again Soon!',
   currency: '₹',
 };
 
@@ -184,11 +182,8 @@ export default function Home() {
 
         {/* Right Column - Preview */}
         <div className={`lg:col-span-5 sticky top-8 preview-column ${activeTab === 'form' ? 'hidden lg:block' : ''}`}>
-          <div className="bg-slate-100/50 dark:bg-slate-800/10 p-2 md:p-4 rounded-3xl min-h-[600px] flex items-start justify-center overflow-auto hide-scrollbar border border-slate-200/40 dark:border-slate-800/30 preview-bg-wrapper">
+          <div className="bg-slate-50/50 dark:bg-slate-900/5 p-1 md:p-2 rounded-3xl h-fit flex items-start justify-center overflow-auto hide-scrollbar border border-slate-200/30 dark:border-slate-800/10 preview-bg-wrapper">
             <ReceiptPreview data={data} />
-          </div>
-          <div className="mt-4 text-center text-sm text-slate-500 dark:text-slate-400 italic print-hidden">
-            * Real-time preview of your digital receipt
           </div>
         </div>
       </div>
